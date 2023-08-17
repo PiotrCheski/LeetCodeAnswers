@@ -12,7 +12,3 @@ class Solution:
                 left_pointer = right_pointer
             right_pointer += 1
         return max_profit
-    
-data = [2, 1, 0]
-solution_test = Solution().maxProfit(data)
-print(solution_test)
