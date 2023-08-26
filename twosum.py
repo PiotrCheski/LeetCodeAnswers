@@ -8,3 +8,7 @@ class Solution:
                 return [prevMap[difference], i]
             prevMap[n] = i
         return None
+    
+numberstest = [2,3,4]
+targettest = 6
+print(Solution().twoSum(numberstest, targettest))
