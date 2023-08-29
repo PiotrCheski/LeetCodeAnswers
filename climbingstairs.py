@@ -5,7 +5,7 @@ class Solution:
         for i in range(n - 1):
             tmp = one
             one = one + two
-            two = one
+            two = tmp
         return one
 ntest = 5
 print(Solution().climbStairs(ntest))
