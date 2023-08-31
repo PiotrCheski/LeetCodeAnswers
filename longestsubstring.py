@@ -1,22 +1,17 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        letters = set()
-        maxInt = 0
-        for i in range(len(s)):
-            l = i
-            currInt = 0
-            while l <= len(s)-1:
-                if s[l] not in letters:
-                    letters.add(s[l])
-                    currInt += 1
-                    l += 1
-                elif s[l] in letters:
-                    letters.clear()
-                    break
-            maxInt = max(maxInt, currInt)
-        return maxInt
+        charSet = set()
+        l = 0
+        res= 0
+        for r in range(len(s)):
+            while s[r] in charSet:
+                charSet.remove(s[l])
+                l += 1
+            charSet.add(s[r])
+            res = max(res, r - l + 1)
+        return res
 
 
 
-t="abcda"
+t="xdxf"
 print(Solution().lengthOfLongestSubstring(t))
