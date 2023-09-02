@@ -1,4 +1,4 @@
-from typing import
+from typing import List
 import collections
 
 class Solution:
@@ -20,30 +20,6 @@ class Solution:
                 cols[c].add(board[r][c])
                 squares[(r // 3, c // 3)].add(board[r][c])
         return True
-                
-
-
-
-
-
-
-        for row in board:
-            numbers = set()
-            for elem in row:
-                if elem != ".":
-                    if elem in numbers:
-                        return False
-                    else:
-                        numbers.add(elem)
-
-        for i in range(9):
-            numbers_col = set()
-            for j in range(9):
-                if board[j][i] != ".":
-                    if board[j][i] in numbers_col:
-                        return False
-                    else:
-                        numbers_col.add(board[j][i])
 
 board = [["5","3",".",".","7",".",".",".","."]
         ,["6",".",".","1","9","5",".",".","."]
