@@ -18,6 +18,6 @@ class Solution:
                 if len(res) == k:
                     return res  
 
-nums = [1,1,1,2,2,3]
+nums = [2, 2, 1, 1]
 k = 2
 print(Solution().topKFrequent(nums, k))
