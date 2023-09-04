@@ -6,13 +6,13 @@ class Solution:
         longest = 0
 
         for n in nums:
-            if longest >= len(nums):
-                return longest
             if (n-1) not in numSet:
                 length = 0
                 while (n + length) in numSet:
                     length += 1
                 longest = max(length, longest)
+                if longest >= len(nums):
+                    return longest
         return longest
             
 

@@ -12,6 +12,7 @@ class Solution:
                 count[ord(c)-ord("a")] += 1
             
             res[tuple(count)].append(s)
+            print(res)
 
         return res.values()
 strs = ["eat","tea","tan","ate","nat","bat"]
