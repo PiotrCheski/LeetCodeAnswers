@@ -1,12 +1,7 @@
 def findCenter(edges):
-    candidates = []
-    for num in edges[0]:
-        candidates.append(num)
-    for part_edges in edges[1:len(edges)]:
-        for num in part_edges:
-            if num in candidates:
-                candidates = [num]
-    return candidates[0]
+    if edges[0][0] in edges[1]:
+        return edges[0][0]
+    return edges[0][1]
 
 
 
