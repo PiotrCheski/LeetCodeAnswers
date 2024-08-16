@@ -29,6 +29,7 @@ def numIslands(grid):
                     queue.append((nr, nc))
                     maxArea_local += 1
         return maxArea_local
+    
     for r in range(rows):
         for c in range(cols):
             if grid[r][c] == 1 and (r, c) not in visited:
