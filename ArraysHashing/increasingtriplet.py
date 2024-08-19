@@ -1,18 +1,15 @@
 def increasingTriplet(nums):
     if len(nums) < 3:
         return False
-
-    first = float('inf')
-    second = float('inf')
-
-    for n in nums:
-        if n <= first:
-            first = n
-        elif n <= second:
-            second = n
+    i = float('inf')
+    j = float('inf')
+    for num in nums:
+        if num < i:
+            i = num
+        elif num < j:
+            j = num
         else:
             return True
-    
     return False
 
 
